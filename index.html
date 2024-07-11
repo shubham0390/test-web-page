@@ -10,9 +10,13 @@
             // Open a new window
             var newTab = window.open(redirectionLink, '_blank');
 
-            // Close the current window if the new window was successfully opened
-            if (newWindow) {
+           // If the new tab is opened, set its location and close the current window
+           if (newTab) {
+                newTab.location.href = redirectionLink;
                 window.close();
+            } else {
+                // If the new tab couldn't be opened (e.g., due to a pop-up blocker), navigate the current window
+                window.location.href = redirectionLink;
             }
         }
     </script>
