@@ -8,7 +8,7 @@
         const redirectionLink = "https://google.com";
         function redirect() {
             // Open a new window
-            var newWindow = window.open(redirectionLink, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+            var newTab = window.open(redirectionLink, '_blank');
 
             // Close the current window if the new window was successfully opened
             if (newWindow) {
